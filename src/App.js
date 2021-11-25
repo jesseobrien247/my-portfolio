@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import Home from "./Components/Home"
-import Projects from "./Components/Projects"
-import Contact from "./Components/Contact"
+import Home from "./Components/Subpages/Home"
+import Projects from "./Components/Subpages/Projects"
+import Contact from "./Components/Subpages/Contact"
 import "./app.css"
 
 class App extends Component {
 
+  /*mobile navigation menu visibility*/
   state = {
     active: false,
   }
@@ -31,6 +32,7 @@ class App extends Component {
                 </ul>
               </div>
 
+              {/*onclick div changes state on line 12*/}
               <div className="nav__toggle" id="nav-toggle" onClick={() => this.setState({ active: !this.state.active})}>
                 <i className='bx bx-menu'></i>
               </div>
@@ -38,6 +40,7 @@ class App extends Component {
             </nav>
           </header>
 
+          {/*swap container content from /components on when nav item is clicked */}
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="Home" element={<Home />} />

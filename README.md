@@ -1,2 +1,2 @@
-# My developer portfolio created using React
-found at jesseobrien.net
+# My developer portfolio, created using React.js
+The hosted version can be found at https://jesseobrien.net
